@@ -1,5 +1,5 @@
-import Banner from "./components/Banner";
-import { Navbar } from "./components/Navbar";
+import Banner from "./components/HeaderComponents/Banner";
+import { Navbar } from "./components/HeaderComponents/Navbar";
 
 
 export default function Header() {
@@ -8,7 +8,6 @@ export default function Header() {
       <>
         <Navbar />
         <Banner />
-
       </>
     )
 }
