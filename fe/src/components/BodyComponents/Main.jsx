@@ -3,6 +3,7 @@ import CardCount from "./MainComponents/CardCount";
 import CardShow from "./MainComponents/CardShow";
 import CourseDetails from "./MainComponents/CourseDetails";
 import FAQSection from "./MainComponents/FAQSection";
+import MainFixedDiv from "./MainComponents/MainFixedDiv";
 import PathShow from "./MainComponents/PathShow";
 
 
@@ -16,6 +17,7 @@ export default function Main() {
         <CardCount />
         <CardShow />
         <FAQSection />
+        <MainFixedDiv />
         
       </>
     )
