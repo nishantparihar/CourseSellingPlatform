@@ -7,3 +7,9 @@
     font-family: "NotoSansDevanagari";
     src:url("./assets/Fonts/NotoSansDevanagari-VariableFont_wdth\,wght.ttf")
 }
+
+@font-face {
+    font-family: 'NotoSansDevanagari';
+    src: url('./assets/Fonts/NotoSansDevanagari-Medium.ttf');
+    font-weight: 500;
+}

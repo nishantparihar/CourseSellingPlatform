@@ -16,8 +16,8 @@ export default function PathShow() {
                         </path>
                     </svg> 
                 </div>
-                <div class="mr-1 text-sm font-medium">
-                    <span class="font-NotoSansDevanagari font-black text-[13px] text-[#5D697B]">संतवाणी</span>
+                <div class="mr-1 text-sm ">
+                    <span class="font-NotoSansDevanagari font-semibold text-[13px] text-[#5D697B]">संतवाणी</span>
                 </div> 
             </div>
         </div>
