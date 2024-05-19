@@ -8,7 +8,7 @@ export default function SearchBar() {
 
     return (
         <>
-            <div class="sticky top-0 z-secondary-navbar bg-white shadow">
+            <div class="sticky top-0 z-10 bg-white shadow">
 
                 {panel && <div class="mx-auto max-w-screen-2xl select-none">
                     <div class="h-12">
