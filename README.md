@@ -122,6 +122,6 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any questions or feedback, please contact [https://www.linkedin.com/in/nishant-singh-parihar-617b23169/].
+For any questions or feedback, please contact [Nishant Singh Parihar](https://www.linkedin.com/in/nishant-singh-parihar-617b23169/).
 
 ---
