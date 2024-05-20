@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
 
 
-
-export default function FAQ({activeId, setActiveId, id}){
-
+export default function FAQ({activeId, setActiveId, id, faq}){
     const [showAnswer, setShowAnswer] = useState(false);
+
 
     useEffect(()=>{
         if(showAnswer){
@@ -24,7 +23,7 @@ export default function FAQ({activeId, setActiveId, id}){
         <div>
             <div class="flex items-center justify-between md:cursor-pointer" onClick={()=>{setShowAnswer(!showAnswer)}}>
                 <div class="pr-2  font-medium text-[#232d3a]">
-                    <span> कोई भी वीडियो श्रृंखला आचार्य प्रशांत के यूट्यूब वीडियो से कैसे अलग है?</span>
+                    <span>{faq.question}</span>
                 </div> 
                 <div class="h-3 w-3 text-slate-400 hover:text-slate-800 transition ease-in duration-1000" style={{ transform: !showAnswer ? "rotate(180deg)" : "rotate(0)"}}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" class="fill-current">
@@ -34,8 +33,7 @@ export default function FAQ({activeId, setActiveId, id}){
             </div> 
             {showAnswer && <div id="markdown" class="w-full" >
                 <div class="md:text-md pt-4 pr-4 leading-normal md:pr-8">
-                    <span class="font-[400] text-[#475569]">
-                        <p>वीडियो श्रृंखला के सभी वीडियो-सत्र सिर्फ़ इस प्लेटफार्म पर उपलब्ध हैं। (कुछ वीडियो के कुछ हिस्से किन्हीं सोशल मीडिया प्लेटफॉर्म पर उपलब्ध हो सकते हैं। हालाँकि, इनकी संरचना, परीक्षण और प्रक्रियाओं के साथ पूरा पाठ्यक्रम इस प्लेटफॉर्म के अलावा कहीं और उपलब्ध नहीं है।)</p>
+                    <span class="font-[400] text-[#475569] [&>p>*]:text-red-500" dangerouslySetInnerHTML={{__html: faq.answer}}>
                     </span>
                 </div>
             </div> }

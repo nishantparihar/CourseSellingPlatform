@@ -11,3 +11,8 @@ export const coursesDetails = atom({
     key: "coursesDetails",
     default: []
 });
+
+export const faqs = atom({
+    key: "faqs",
+    default: []
+});
