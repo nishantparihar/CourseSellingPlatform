@@ -105,6 +105,11 @@ npm run build
 The build output will be located in the `dist/` directory.
 
 
+## Deployment
+
+The application is deployed and can be accessed at [Course Selling Plateform](https://course-selling-platform-one.vercel.app/).
+
+
 ## Contributing
 
 If you wish to contribute to the project, please follow these steps:
