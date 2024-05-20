@@ -12,10 +12,10 @@ export default function CourseInfo(){
     return (
 
             <div className="flex flex-col self-stretch pt-4 text-sm md:pl-4 md:pt-0 lg:text-lg">
-                <div className="text-lg font-medium text-gray-title lg:text-xl">
+                <div className="text-lg font-medium lg:text-xl">
                     <span className="font-NotoSansDevanagari font-[500]">{seriesDets.subtitle ? seriesDets.subtitle : ""}</span>
                 </div> 
-                <div className="text-justify text-base text-gray-subtitle md:pr-4">
+                <div className="text-justify text-base md:pr-4">
                     <div className="hidden md:block">
                         <span className="font-NotoSansDevanagari font-[500] text-[#6A5569]">{seriesDets.description ? seriesDets.description: ""}</span>
                     </div>

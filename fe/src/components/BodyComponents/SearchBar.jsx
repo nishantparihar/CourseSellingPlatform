@@ -11,7 +11,7 @@ export default function SearchBar() {
 
     return (
         <>
-            <div class="sticky top-0 z-10 bg-white shadow">
+            <div class="sticky top-0 z-10 bg-white shadow font-NotoSansDevanagari">
 
                 {panel && <div class="mx-auto max-w-screen-2xl select-none">
                     <div class="h-12">
@@ -25,11 +25,11 @@ export default function SearchBar() {
 
 
                                 <div class="ml-6 hidden w-[36rem] flex-grow md:block">
-                                    <div class="items-center rounded border border-gray-disabled shadow-sm">
+                                    <div class="items-center rounded border border-gray-600 shadow-sm">
                                         <div class="relative"> 
                                             <div class="relative flex w-full flex-row">
                                                 <button class="flex flex-row items-center whitespace-nowrap rounded-l border-r pl-2 text-xs font-normal">
-                                                    <div class="text-xs font-medium text-gray-subtitle">
+                                                    <div class="text-xs font-medium text-gray-600">
                                                         <span>{language?"All":"सभी"}</span>
                                                     </div> 
                                                     <div class="px-3 text-slate-500">
@@ -39,7 +39,7 @@ export default function SearchBar() {
                                                         </svg>
                                                     </div>
                                                 </button> 
-                                                <input type="search" class="h-9 w-full border-0 text-gray-title caret-brand-600 focus:outline-none placeholder:pl-4 placeholder:text-slate-500" placeholder= {language?"Search for video series":"वीडियो श्रृंखलाएँ खोजें"}/>  
+                                                <input type="search" class="h-9 w-full border-0 caret-brand-600 focus:outline-none placeholder:pl-4 placeholder:text-slate-500" placeholder= {language?"Search for video series":"वीडियो श्रृंखलाएँ खोजें"}/>  
                                                 <button class="items-end rounded-r fill-current py-1 px-2 text-slate-700">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
                                                         <path fillRule="evenodd" d="M6.5 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8m-6 4a6 6 0 1 1 10.89 3.476l4.817 4.817a1 1 0 0 1-1.414 1.414l-4.816-4.816A6 6 0 0 1 .5 6">
@@ -77,7 +77,7 @@ export default function SearchBar() {
 
                 { !panel && <div class="flex justify-end h-full w-full items-center pl-1.5 pr-4" style={{}}>
                     <div class="w-full">
-                        <div class="inline-flex w-full items-center py-2 text-gray-subtitle">
+                        <div class="inline-flex w-full items-center py-2">
                             <div class="cursor-pointer px-2.5 py-2.5" onClick={()=>{setPanel(true)}}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13">
                                     <path fillRule="evenodd" d="M7.244 12.249a.89.89 0 0 1-1.238 0L.756 7.106a.845.845 0 0 1 0-1.212L6.006.75a.89.89 0 0 1 1.238 0 .845.845 0 0 1 0 1.212l-3.757 3.68h10.138c.483 0 .875.384.875.857a.866.866 0 0 1-.875.857H3.487l3.757 3.68a.845.845 0 0 1 0 1.212">

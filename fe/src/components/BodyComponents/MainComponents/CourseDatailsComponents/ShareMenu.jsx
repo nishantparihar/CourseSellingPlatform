@@ -11,7 +11,7 @@ export default function ShareMenu(){
 
         <div className="hidden pt-4 md:block">
             <div className="flex flex-col items-center md:items-start">
-                <div className="pb-3 text-sm font-medium text-gray-title md:pb-1">
+                <div className="pb-3 text-sm font-medium md:pb-1">
                     <span className="font-NotoSansDevanagari font-[500]">{language?"Share this series":"इस श्रृंखला को साझा करें"}</span>
                     <span className="invisible md:visible">:</span>
                 </div> 

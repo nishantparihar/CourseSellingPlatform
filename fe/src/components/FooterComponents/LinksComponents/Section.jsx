@@ -5,7 +5,7 @@ import SectionItems from "./SectionItems";
 export default function Section({sInfo}) {
 
     return (
-      <div>
+      <div className="font-NotoSansDevanagari">
         <SectionHeader header= {sInfo.sectionHeader}/>
         <SectionItems sectionItems = {sInfo.sectionItems} />
       </div>

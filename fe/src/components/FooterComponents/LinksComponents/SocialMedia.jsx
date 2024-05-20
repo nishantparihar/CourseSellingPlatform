@@ -11,7 +11,7 @@ export default function SocialMedia() {
             <SectionHeader header ={"SOCIAL MEDIA"}/>
             <div class="mb-6 flex flex-col">
                 <div class="mb-2.5 text-slate-300">
-                    <span class="font-en svelte-t3mcl">For English</span>
+                    <span>For English</span>
                 </div>
                 <div class="flex space-x-2">
                     {socialMediaInfoEng.map((smInfo, ind)=> <SocialMediaLink key={ind} smInfo={smInfo} />)}
@@ -19,7 +19,7 @@ export default function SocialMedia() {
             </div>
             <div class="flex flex-col">
                 <div class="mb-2.5 text-slate-300">
-                    <span class="font-en svelte-t3mcl">For English</span>
+                    <span>For English</span>
                 </div>
                 <div class="flex space-x-2">
                     {socialMediaInfoHin.map((smInfo, ind)=> <SocialMediaLink key={ind} smInfo={smInfo} />)}
