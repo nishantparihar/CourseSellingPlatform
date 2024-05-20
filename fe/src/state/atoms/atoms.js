@@ -16,3 +16,8 @@ export const faqs = atom({
     key: "faqs",
     default: []
 });
+
+export const pageLanguage = atom({
+    key: "pageLanguage",
+    default: true
+})
