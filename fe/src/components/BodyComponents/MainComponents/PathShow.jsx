@@ -1,14 +1,15 @@
-
+import { useRecoilValue } from "recoil"
+import { pageLanguage } from '../../../state/atoms/atoms'
 
 
 export default function PathShow() {
-
+    const language = useRecoilValue(pageLanguage)
     return (
       <>
         <div class="hidden px-4 pt-4 md:block lg:px-8">
             <div class="flex w-full flex-wrap items-baseline justify-start text-gray-subtitle">
                 <div class="mr-1 text-sm cursor-pointer hover:text-[#EA580C]">
-                    <span class="font-NotoSansDevanagari font-black text-[13px] text-[#5D697B]">होम</span>
+                    <span class="font-NotoSansDevanagari font-black text-[13px] text-[#5D697B]">{language?"Home":"होम"}</span>
                 </div> 
                 <div class="mr-1 px-1 text-gray-subtitle">
                     <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" class="fill-current">

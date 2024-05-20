@@ -1,10 +1,13 @@
 import { useState } from "react"
+import { useRecoilValue } from "recoil";
+import {pageLanguage} from '../../state/atoms/atoms'
 
 
 
 export default function SearchBar() {
 
     const [panel, setPanel] = useState(true);
+    const language = useRecoilValue(pageLanguage)
 
     return (
         <>
@@ -27,7 +30,7 @@ export default function SearchBar() {
                                             <div class="relative flex w-full flex-row">
                                                 <button class="flex flex-row items-center whitespace-nowrap rounded-l border-r pl-2 text-xs font-normal">
                                                     <div class="text-xs font-medium text-gray-subtitle">
-                                                        <span>सभी</span>
+                                                        <span>{language?"All":"सभी"}</span>
                                                     </div> 
                                                     <div class="px-3 text-slate-500">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" class="fill-current">
@@ -36,8 +39,8 @@ export default function SearchBar() {
                                                         </svg>
                                                     </div>
                                                 </button> 
-                                                <input type="search" class="h-9 w-full border-0 text-gray-title caret-brand-600 focus:outline-none" placeholder=" वीडियो श्रृंखलाएँ खोजें"/>  
-                                                <button class="items-end rounded-r bg-brand-200 fill-current py-1 px-2 text-slate-700">
+                                                <input type="search" class="h-9 w-full border-0 text-gray-title caret-brand-600 focus:outline-none placeholder:pl-4 placeholder:text-slate-500" placeholder= {language?"Search for video series":"वीडियो श्रृंखलाएँ खोजें"}/>  
+                                                <button class="items-end rounded-r fill-current py-1 px-2 text-slate-700">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
                                                         <path fillRule="evenodd" d="M6.5 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8m-6 4a6 6 0 1 1 10.89 3.476l4.817 4.817a1 1 0 0 1-1.414 1.414l-4.816-4.816A6 6 0 0 1 .5 6">
                                                         </path>
@@ -61,7 +64,7 @@ export default function SearchBar() {
                                 <div class="whitespace-nowrap py-4 text-sm">
                                     <a href="https://acharyaprashant.org/hi/login?page=https%3A%2F%2Facharyaprashant.org%2Fhi%2Fvideo-modules%2Fseries%2Fcourse-series-eeb9d3">
                                         <div class="cursor-pointer rounded-md text-center  transition duration-150  bg-[#EA580C] hover:bg-[#D24115] text-white px-2 py-1">
-                                            <span class="">लॉगिन करें</span>
+                                            <span className="font-NotoSansDevanagari">{language?"Login":"लॉगिन करें"}</span>
                                         </div>
                                     </a>
                                 </div>

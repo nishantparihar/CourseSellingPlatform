@@ -2,21 +2,21 @@ import LeftSectionFAQ from "./FAQComponents/LeftSectionFAQ";
 import RightSectionFAQ from "./FAQComponents/RightSectionFAQ";
 import { useEffect } from "react";
 import axios from "axios";
-import { faqs } from '../../../state/atoms/atoms'
-import { useSetRecoilState } from 'recoil'
+import { faqs, pageLanguage } from '../../../state/atoms/atoms'
+import { useRecoilValue, useSetRecoilState } from 'recoil'
 
 
 
 
 export default function FAQSection(){
     const setFaqs = useSetRecoilState(faqs);
-
+    const language =useRecoilValue(pageLanguage);
 
     useEffect(()=>{
 
         try{
-  
-            axios.get("https://api.acharyaprashant.org/v2/legacy/courses/faqs?language=hindi")
+            const fetchLanguage = language ? "english" : "hindi";
+            axios.get(`https://api.acharyaprashant.org/v2/legacy/courses/faqs?language=${fetchLanguage}`)
             .then((res)=>{
                 if(res && res.status == 200 && res.data){
                     setFaqs(res.data);
@@ -30,7 +30,7 @@ export default function FAQSection(){
           console.log("Server Error")
         }
   
-    }, [])
+    }, [language]);
 
 
     return (

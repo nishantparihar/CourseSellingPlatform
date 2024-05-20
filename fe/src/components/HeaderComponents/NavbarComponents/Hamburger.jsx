@@ -1,7 +1,11 @@
-
+import { useRecoilValue } from "recoil"
+import { pageLanguage } from "../../../state/atoms/atoms"
 
 
 export function Hamburger(){
+
+    const language = useRecoilValue(pageLanguage);
+
     return (
         <div className="h-full flex items-center">
             <div className="mx-2 flex cursor-pointer items-center px-2 py-2 text-white">
@@ -10,7 +14,7 @@ export function Hamburger(){
                     </path>
                 </svg> 
                 <div class="hidden pl-2 mb-1 lg:block">
-                    <span class="text-[12px]">मेन्यू</span>
+                    <span class="text-[12px]">{language? "Menu" :"मेन्यू"}</span>
                 </div>
             </div>
 
