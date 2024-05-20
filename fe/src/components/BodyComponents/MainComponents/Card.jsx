@@ -1,32 +1,32 @@
 
 
 
-
-export default function Card(){
+export default function Card({courseDets}){
+   
     return (
-        <a href="https://acharyaprashant.org/hi/video-modules/module/swo1" className="flex cursor-pointer flex-col justify-between space-y-2 overflow-hidden px-4 pt-4 hover:bg-slate-100 lg:rounded-lg lg:hover:shadow">
+        <a href={`https://acharyaprashant.org/hi/video-modules/module/${courseDets.id}`} className="flex cursor-pointer flex-col justify-between space-y-2 overflow-hidden px-4 pt-4 hover:bg-slate-100 lg:rounded-lg lg:hover:shadow">
             <div className="flex flex-col space-y-2 font-NotoSansDevanagari font-[500]">
                 <div className="self-start  pb-2">
                     <div className="bg-[#94A3B8] pl-2 rounded-md">
-                        <span className=" text-white text-[14px]">भाग 1</span>&nbsp;
+                        <span className=" text-white text-[14px]">भाग {courseDets.series.order.seq}</span>&nbsp;
                     </div>
                 </div> 
                 <div className="flex w-full flex-col text-left">
                     <div>
                         <div className="text-lg font-medium leading-normal text-gray-900">
-                            <span>संत समागम परम सुख</span>
+                            <span>{courseDets.title}</span>
                         </div> 
                         <div className="text-sm leading-normal text-gray-500 lg:text-base">
-                            <span>संतों के मुख्य दोहे पर आधारित</span>
+                            <span>{courseDets.subtitle}</span>
                         </div> 
                         <div className="pt-1 text-xs text-gray-500 lg:text-sm">
-                            <span>2 घंटे 30 मिनट</span>
+                            <span>{parseInt(courseDets.courseHours) ? <span>{parseInt(courseDets.courseHours)} घंटे</span>: ""}  {Math.ceil(60*(courseDets.courseHours % 1))} मिनट</span>
                         </div> 
                         <div className="pt-1 text-xs text-gray-500 lg:text-sm">
-                            <span>सहयोग राशि: ₹21</span> 
+                            <span>सहयोग राशि: ₹{courseDets.amount}</span> 
                             <del>
                                 <span className="pl-1">
-                                    <span>₹800</span>
+                                    <span>₹{courseDets.originalAmount}</span>
                                 </span>
                             </del>
                         </div>
@@ -34,7 +34,7 @@ export default function Card(){
                     <div className="mt-2 flex flex-wrap text-xs">
                         <div className="mr-1">
                             <div className="rounded px-1.5 pt-1 text-xs text-slate-700 bg-[#C7E6F8]"> 
-                                <span>हिन्दी</span>
+                                <span>{courseDets.language === "hindi" ? "हिन्दी" : "English"}</span>
                             </div> 
                         </div>
                     </div>

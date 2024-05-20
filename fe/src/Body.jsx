@@ -8,7 +8,6 @@ export default function Body() {
       <>
         <SearchBar />
         <Main />
-
       </>
     )
 }

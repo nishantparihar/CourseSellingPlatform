@@ -14,7 +14,7 @@ export default function SocialMedia() {
                     <span class="font-en svelte-t3mcl">For English</span>
                 </div>
                 <div class="flex space-x-2">
-                    {socialMediaInfoEng.map((smInfo)=> <SocialMediaLink smInfo={smInfo} />)}
+                    {socialMediaInfoEng.map((smInfo, ind)=> <SocialMediaLink key={ind} smInfo={smInfo} />)}
                 </div>
             </div>
             <div class="flex flex-col">
@@ -22,7 +22,7 @@ export default function SocialMedia() {
                     <span class="font-en svelte-t3mcl">For English</span>
                 </div>
                 <div class="flex space-x-2">
-                    {socialMediaInfoHin.map((smInfo)=> <SocialMediaLink smInfo={smInfo} />)}
+                    {socialMediaInfoHin.map((smInfo, ind)=> <SocialMediaLink key={ind} smInfo={smInfo} />)}
                 </div>
             </div>
 

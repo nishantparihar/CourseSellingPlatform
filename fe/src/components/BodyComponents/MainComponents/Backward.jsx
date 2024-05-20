@@ -1,7 +1,12 @@
+import { useRecoilValue} from 'recoil'
+import { seriesDetails } from '../../../state/atoms/atoms'
 
 
 
 export default function Backward() {
+
+    const seriesDets = useRecoilValue(seriesDetails);
+
 
     return (
       <>
@@ -13,7 +18,7 @@ export default function Backward() {
                 </svg>
             </button> 
             <div class="text-lg font-semibold text-gray-800 md:text-xl lg:py-0 lg:text-xl">
-                <span class="font-bold ">संतवाणी</span>
+                <span class="font-bold ">{seriesDets.title ? seriesDets.title : ""}</span>
             </div>
         </div>
       </>
